@@ -11,7 +11,6 @@ import com.elisis.gtnhlanth.common.register.LanthItemList;
 import com.elisis.gtnhlanth.common.register.WerkstoffMaterialPool;
 import com.elisis.gtnhlanth.loader.BotRecipes;
 import com.elisis.gtnhlanth.loader.RecipeLoader;
-import com.elisis.gtnhlanth.xmod.nei.IMC;
 import com.github.bartimaeusnek.bartworks.API.WerkstoffAdderRegistry;
 import com.github.bartimaeusnek.bartworks.system.material.Werkstoff;
 
@@ -32,8 +31,7 @@ import gregtech.api.util.GT_Log;
         dependencies = "required-after:IC2; " + "required-after:gregtech; "
                 + "required-after:bartworks; "
                 + "required-after:GoodGenerator; "
-                + "before:miscutils; "
-                + "required-after:dreamcraft; ")
+                + "before:miscutils; ")
 public class GTNHLanthanides {
 
     public static Logger LOG = Logger.getLogger("GTNH:Lanthanides");
@@ -59,7 +57,6 @@ public class GTNHLanthanides {
     public static void init(FMLInitializationEvent e) {
         proxy.init(e);
         WerkstoffMaterialPool.runInit();
-        IMC.IMCSender();
     }
 
     @EventHandler
